@@ -1,0 +1,18 @@
+
+sprite $Cloud_Datastore [256x256/16z] {
+xTjLbkD860NXAx0hzx_XcMRTEbPpf-54nAlf_qpY_79cPcPcPcOs7XHJtp7r7LFV8VaTajyX-HsIto7v7PBVwGVoEoI_qm_aT_g1_4u_aDyX-Pr-8B_J3-Ht
+-e7y3idlz0FvdNuWlsFpzGyalzCFv7VwWVmEoU_q0_cTVY2_qm_aTqX-fn_8x_G3-Pr-8Bz3yZlzG7wd7yZlz0Fv7PBVwGVoE_r0ViVcwnz8VgSVoE_q0_aT
+cwz_8FcTVY2_qm_aTqX-fn_8x_G3-Pr-8Bz3yZlza_dN_QRBw2v_S8Vh-6TDzbzoqZgEjfoqZQCr9rtc-iS_QybPRx_-_bzprZhr2p3zztNzMt_qpnjntDs_
+LgV-zMYPCEEZ_QCwyw_Zw3fxna7p3_tLuFb7ytb-_QFuB-5VfyofVr3z8ud-mVMFH_htwio_x4VRFFzuWF-ns_yTtZycjC3zUqvQnj7wCzwIa_RnAkthJTlF
+xl1UjvtTOK9cPcPcPgx_WhP_yZhRlmjx_yUiKVLFyM_xqVAi_ddx_vixrgVqwy_dc7xz-HhJ7_rV8_hJqVpwypwQF_hddbozh4TvEh_dlzz4yizz-lLlhtzv
+cxt_n-kVpdhezM_NdzvXCj_hFyFcwm-Sd-X7ynCsNt_OVFs1ynFzQ7x2vkiFcwy_S7wY7yrFs7pzOVFr1yvFzAFv2PklFso-_i3v2PklFso-_i3vYNuqFs7p
+zOVDrnyuFz6FvYTillwm-Ve3voVwqVo4pTSVDbz_uFn4FvgViFdwm-Rh3voVw4Vp4pPVVzXy_O7p4pPVVzXy_O7p4pPVV-3y1CvFuFo4oU-G-ex9xw3wxkdn
+PcPcPcPczZy
+}
+
+
+
+GCPEntityColoring(Cloud_Datastore)
+!define Cloud_Datastore(e_alias, e_label, e_techn) GCPEntity(e_alias, e_label, e_techn, GCP_COLOR, Cloud_Datastore, Cloud_Datastore)
+!define Cloud_Datastore(e_alias, e_label, e_techn, e_descr) GCPEntity(e_alias, e_label, e_techn, e_descr, GCP_COLOR, Cloud_Datastore, Cloud_Datastore)
+
