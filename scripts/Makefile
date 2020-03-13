@@ -23,13 +23,14 @@ plantuml.jar:
 	esac
 
 download: plantuml.jar
-	@wget  https://cloud.google.com/icons/files/gcp-basic-cards.zip -O gcp-basic-cards.zip && \
-	unzip gcp-basic-cards.zip && \
-	mv Products\ and\ services\ Cards Products_and_services_Cards
+	@wget  https://cloud.google.com/icons/files/gcp-icons.zip -O gcp.zip && \
+	unzip gcp.zip && \
+	mv GCP\ Icons/Products\ and\ services ./Products_and_services && \
+	rm -rf GCP\ Icons
 
 create_graphics:
 	@python create_graphics.py
 
-_clean:
+clean:
 	@rm -f ./plantuml.jar
-	@rm -rf __MACOSX gcp-basic-cards.zip
+	@rm -rf __MACOSX gcp.zip

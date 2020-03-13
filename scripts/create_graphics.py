@@ -18,7 +18,7 @@ GCPEntityColoring({entity})
 
 
 def create_sprites():
-    for root, dirs, files in os.walk("./Products_and_services_Cards"):
+    for root, dirs, files in os.walk("./Products_and_services"):
         for dir in dirs:
             print("Directory: {}".format(dir))
             folder = "{}/{}".format(root,dir)
@@ -35,16 +35,22 @@ def create_sprites():
                         full_path = "{}/{}".format(folder, file)
                     if "png" in file:
                         sprite = create_sprite(full_path, file)
-                        move_to_dist(sprite)
+                        if sprite is not None:
+                            move_to_dist(sprite)
 
 
 def create_sprite(input_file, ent):
+    statinfo = os.stat(input_file)
+    if statinfo.st_size >= 100000:
+        print("Image {} is too big".format(input_file))
+        return None
+
     sprite_filename=input_file.replace(".png", ".puml")
     print("Creating sprite: {}".format(sprite_filename))
 
     cmd = PUML_SPIT_GENERATOR_CMD.format(input_file).split(" ")
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True)
-    stdout, stderr = p.communicate(timeout=60)
+    stdout, stderr = p.communicate(timeout=90)
 
     if stderr is not None:
         print("Error running command : {} \n {}".format(PUML_SPIT_GENERATOR_CMD.format(input_file), stderr))
